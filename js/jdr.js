@@ -1,10 +1,12 @@
+/*global console */
+
 /*
 var Personnage = {
     nom: "",
     sante: 0,
     force: 0,
     xp: 0,
-    
+
     // Renvoie la description du personnage
     decrire: function () {
         var description = this.nom + " a " + this.sante + " points de vie, " + this.force + " points de force et " + this.xp + " points d'expérience";
@@ -40,7 +42,7 @@ var Personnage = {
         this.force = force;
         this.xp = 0;
     },
-    
+
     // Renvoie la description du personnage
       decrire: function () {
         var description = this.nom + " a " + this.sante + " points de vie, " + this.force + " points de force et " + this.xp + " points d'expérience";
@@ -65,6 +67,7 @@ Création des adversaires
 var Personnage = {
     // Initialise le personnage
     initPerso: function (nom, sante, force) {
+        'use strict';
         this.nom = nom;
         this.sante = sante;
         this.force = force;
@@ -74,18 +77,21 @@ var Personnage = {
 var Joueur = Object.create(Personnage);
 // Initialise le joueur
 Joueur.initJoueur = function (nom, sante, force) {
+    'use strict';
     this.initPerso(nom, sante, force);
     this.xp = 0;
 };
 // Renvoie la description du joueur
 Joueur.decrire = function () {
-      var description = this.nom + " a " + this.sante + " points de vie, " + this.force + " points de force et " + this.xp + " points d'expérience";
-        return description;
+    'use strict';
+    var description = this.nom + " a " + this.sante + " points de vie, " + this.force + " points de force et " + this.xp + " points d'expérience";
+    return description;
 };
 
 var Adversaire = Object.create(Personnage);
 // Initialise l'adversaire
 Adversaire.initAdversaire = function (nom, sante, force, race, valeur) {
+    'use strict';
     this.initPerso(nom, sante, force);
     this.race = race;
     this.valeur = valeur;
