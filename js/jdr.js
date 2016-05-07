@@ -1,5 +1,6 @@
 /*global console */
 // LOLllllllllllllllllllllll
+// MDR !!!!!!!!!!!!!!!!!!!!!!!!
 
 /*
 var Personnage = {
